@@ -1,10 +1,10 @@
 // Where to load data from. Choose either a local file in GitHub repo, such as `data/places.csv`,
 // or a Google Sheets URL (File > Publish to the Web > CSV )
-const dataLocation = 'data/places.csv';
+const dataLocation = 'data/Format_Web_Map_LPHA.csv';
 
 // Map's initial center, and zoom level
-const mapCenter = [0.6795, 101.345];
-const mapZoom = 12;
+const mapCenter = [0.54047, 101.05640];
+const mapZoom = 10;
 
 // Marker icon height and width
 const iconHeight = 30;
