@@ -4,7 +4,7 @@ const dataLocation = 'data/Format_Web_Map_LPHA.csv';
 
 // Map's initial center, and zoom level
 const mapCenter = [0.54047, 101.05640];
-const mapZoom = 12;
+const mapZoom = 14;
 
 // Marker icon height and width
 const iconHeight = 30;
