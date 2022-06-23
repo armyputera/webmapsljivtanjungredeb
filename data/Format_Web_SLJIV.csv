@@ -1,4 +1,4 @@
-nomor_pohon,barcode_pohon,jenis_pohon,nomor_petak,luas_petak,nomor_jalur,arah_jalur,panjang_jalur,status_pohon, monitoring ,icon,Longitude,Latitude, panjang_pohon ,pangkal_pohon,ujung_pohon,rata_rata_pohon, volume_pohon ,no_produk,image1,image2
+nomor_pohon,barcode_pohon,jenis_pohon,nomor_petak,luas_petak,nomor_jalur,arah_jalur,panjang_jalur,status_pohon, group ,icon,Longitude,Latitude, panjang_pohon ,pangkal_pohon,ujung_pohon,rata_rata_pohon, volume_pohon ,no_produk,image1,image2
 27,1904A09SMLJ0000000000128694.01,Meranti Merah,X-01,57,1,UTARA,626,POHON TEBANG,Sudah Tebang,icon/mature_tree.svg,116.7887813,2.134195592,19.4,93,72,82,10.25,1719,media/,media/
 27,1904A09SMLJ0000000000128694.02,Meranti Merah,X-01,57,1,UTARA,626,POHON TEBANG,Sudah Tebang,icon/mature_tree.svg,116.7887813,2.134195592,15,72,56,64,4.83,1720,media/,media/
 29,1904A09SMLJ0000000000128695,Meranti Merah,X-01,57,1,UTARA,626,POHON TEBANG,Sudah Tebang,icon/mature_tree.svg,116.7887121,2.134446822,22.6,65,56,60,6.39,1718,media/,media/
