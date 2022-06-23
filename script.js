@@ -62,13 +62,17 @@ var updateSidebar = function(marker) {
 
     // Populate place information into the sidebar
     $('#placeInfo').animate({opacity: 0.5}, 300).promise().done(function() {
-      $('#placeInfo h2').html(d.kode_pohon);
-      $('#placeInfo h3').html(d.nama_lokal+' ( <i>'+d.nama_latin+ '</i> )');
+      $('#placeInfo h2').html(d.barcode_pohon);
+      $('#placeInfo h3').html(d.nomor_pohon+' ( <i>'+d.jenis_pohon+ '</i> )');
       $('#description').html(
         '<table>\
           <tr>\
-            <th scope="row">Status IUCN</th>\
-            <td>'+d.status_iucn+'</td>\
+            <th scope="row">Nomor Petak</th>\
+            <td>'+d.nomor_petak+'</td>\
+          </tr>\
+          <tr>\
+            <th scope="row">Luas Petak</th>\
+            <td>'+d.luas_petak+'</td>\
           </tr>\
           <tr>\
             <th scope="row">Latitude</th>\
@@ -79,64 +83,36 @@ var updateSidebar = function(marker) {
             <td>'+d.Longitude+'</td>\
           </tr>\
           <tr>\
-            <th scope="row">Perhutanan Sosial</th>\
-            <td>'+d.unit_PS+'</td>\
+            <th scope="row">Nomor Jalur</th>\
+            <td>'+d.nomor_jalur+'</td>\
           </tr>\
           <tr>\
-            <th scope="row">Nama Khas Wilayah</th>\
-            <td>'+d.nama_khas_wilayah+'</td>\
+            <th scope="row">Arah Jalur</th>\
+            <td>'+d.arah_jalur+'</td>\
           </tr>\
           <tr>\
-            <th scope="row">Jenis Lahan</th>\
-            <td>'+d.jenis_lahan+'</td>\
+            <th scope="row">Panjang Pohon</th>\
+            <td>'+d.panjang_pohon+' cm </td>\
           </tr>\
           <tr>\
-            <th scope="row">Diameter</th>\
-            <td>'+d.diameter+' cm </td>\
+            <th scope="row">Pangkal_pohon</th>\
+            <td>'+d.pangkal_pohon+' m </td>\
           </tr>\
           <tr>\
-            <th scope="row">Tinggi</th>\
-            <td>'+d.tinggi+' m </td>\
+            <th scope="row">Ujung Pohon</th>\
+            <td>'+d.ujung_pohon+' km </td>\
           </tr>\
           <tr>\
-            <th scope="row">Jarak Permukiman</th>\
-            <td>'+d.jarak_permukiman+' km </td>\
+            <th scope="row">Rata-Rata Pohon</th>\
+            <td>'+d.rata_rata_pohon+'</td>\
           </tr>\
           <tr>\
-            <th scope="row">Status Adopsi</th>\
-            <td>'+d.status_adopsi+'</td>\
+            <th scope="row">Volume Pohon</th>\
+            <td>'+d.volume_pohon+'</td>\
           </tr>\
           <tr>\
-            <th scope="row">Nama Pengadopsi</th>\
-            <td>'+d.nama_pengadopsi+'</td>\
-          </tr>\
-          <tr>\
-            <th scope="row">Masa Berlaku</th>\
-            <td>'+d.masa_berlaku+'</td>\
-          </tr>\
-          <tr>\
-            <th scope="row">Nama Surveyor</th>\
-            <td>'+d.nama_surveyor+'</td>\
-          </tr>\
-          <tr>\
-            <th scope="row">Waktu Survei</th>\
-            <td>'+d.waktu_survei+'</td>\
-          </tr>\
-          <tr>\
-            <th scope="row">Harga Adopsi</th>\
-            <td> Rp '+d.harga_adopsi+'</td>\
-          </tr>\
-          <tr>\
-            <th scope="row">Serapan Karbon</th>\
-            <td>'+d.serapan_karbon+' Kg </td>\
-          </tr>\
-          <tr>\
-            <th scope="row">Penyedia Bibit</th>\
-            <td>'+d.penyedia_bibit+'</td>\
-          </tr>\
-          <tr>\
-            <th scope="row">Metode Perhitungan Karbon</th>\
-            <td>'+d.metode_karbon+'</td>\
+            <th scope="row">Nomor Produk</th>\
+            <td>'+d.no_produk+'</td>\
           </tr>\
         </table>'
       );
@@ -166,11 +142,11 @@ var updateSidebar = function(marker) {
             href: d[idx],
             'data-lightbox': 'gallery',
             //'data-title': ( d[idx + 'Caption'] + ' ' + source )  || '',
-            'data-alt': d.kode_pohon,
+            'data-alt': d.barcode_pohon,
             'class': i === 1 ? '' : 'dn'
           });
 
-          var img = $('<img/>', { src: d[idx], alt: d.kode_pohon, class: 'dim br1' });
+          var img = $('<img/>', { src: d[idx], alt: d.barcode_pohon, class: 'dim br1' });
           $('#gallery').append( a.append(img) );
 
           if (i === 1) {
@@ -268,7 +244,7 @@ var addMarkers = function(data) {
  */
 var loadData = function(loc) {
 
-  Papa.parse('https://raw.githubusercontent.com/armyputera/webmap_lphapetapahan/main/data/Format_Web_Map_LPHA.csv', {
+  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungderep/main/data/Format_Web_SLJIV.csv', {
     header: true,
     download: true,
     complete: function(results) {
@@ -386,8 +362,8 @@ var initMap = function() {
   layer_BatasKawasan = L.geoJson(json_Batas_Kawasan_LPHA_Petapahan,{
     attribution: '',
     interactive: true,
-    dataVar: 'json_Batas_Kawasan_LPHA_Petapahan',
-    layerName: 'layer_Batas_Kawasan_LPHA_Petapahan',
+    dataVar: 'json_AA0004BLK3_geojson',
+    layerName: 'layer_AA0004BLK3_geojson',
     style: style_bataskawasan
   
     //pane: 'pane_PohonAdopsiMinastahura_4'
@@ -421,7 +397,7 @@ var initMap = function() {
   // Add data & GitHub links
   map.attributionControl.setPrefix('Download <a href="'
     + dataLocation + '" target="_blank">data</a> or \
-    view <a href="https://github.com/armyputera/webmap_lphapetapahan" target="_blank">code on\
+    view <a href="https://github.com/armyputera/webmapsljivtanjungderep" target="_blank">code on\
     GitHub</a> | created with <a href="http://leafletjs.com" title="A JS library\
     for interactive maps">Leaflet</a>');
 
