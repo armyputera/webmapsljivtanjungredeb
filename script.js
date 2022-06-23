@@ -244,7 +244,7 @@ var addMarkers = function(data) {
  */
 var loadData = function(loc) {
 
-  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungderep/main/data/Format_Web_SLJIV.csv', {
+  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungredep/main/data/Format_Web_SLJIV.csv', {
     header: true,
     download: true,
     complete: function(results) {
@@ -359,7 +359,7 @@ var initMap = function() {
   map.getPane('pane_PohonAdopsiMinastahura_4').style.zIndex = 1;
   map.getPane('pane_PohonAdopsiMinastahura_4').style['mix-blend-mode'] = 'normal';
 
-  layer_BatasKawasan = L.geoJson(json_Batas_Kawasan_LPHA_Petapahan,{
+  layer_BatasKawasan = L.geoJson(json_AA0004BLK3_geojson,{
     attribution: '',
     interactive: true,
     dataVar: 'json_AA0004BLK3_geojson',
@@ -397,7 +397,7 @@ var initMap = function() {
   // Add data & GitHub links
   map.attributionControl.setPrefix('Download <a href="'
     + dataLocation + '" target="_blank">data</a> or \
-    view <a href="https://github.com/armyputera/webmapsljivtanjungderep" target="_blank">code on\
+    view <a href="https://github.com/armyputera/webmapsljivtanjungredep" target="_blank">code on\
     GitHub</a> | created with <a href="http://leafletjs.com" title="A JS library\
     for interactive maps">Leaflet</a>');
 
