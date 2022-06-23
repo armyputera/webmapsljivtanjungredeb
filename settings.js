@@ -11,5 +11,5 @@ const iconHeight = 30;
 const iconWidth = 30;
 
 //Icon for pohon muda and pohon dewasa
-const sudahTebang =  'logo/pohon_dewasa.svg'
-const belumTebang = 'logo/tree-5202.svg'
+const pohonDewasa =  'logo/pohon_dewasa.svg'
+const pohonMuda = 'logo/tree-5202.svg'
