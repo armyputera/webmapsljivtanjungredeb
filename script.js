@@ -244,7 +244,7 @@ var addMarkers = function(data) {
  */
 var loadData = function(loc) {
 
-  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungredep/main/data/Format_Web_SLJIV.csv', {
+  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungredeb/main/data/Format_Web_SLJIV.csv', {
     header: true,
     download: true,
     complete: function(results) {
@@ -397,7 +397,7 @@ var initMap = function() {
   // Add data & GitHub links
   map.attributionControl.setPrefix('Download <a href="'
     + dataLocation + '" target="_blank">data</a> or \
-    view <a href="https://github.com/armyputera/webmapsljivtanjungredep" target="_blank">code on\
+    view <a href="https://github.com/armyputera/webmapsljivtanjungredeb" target="_blank">code on\
     GitHub</a> | created with <a href="http://leafletjs.com" title="A JS library\
     for interactive maps">Leaflet</a>');
 
