@@ -1,15 +1,5 @@
-# leaflet-point-map-sidebar: Web Map Adopsi Pohon Riau -v1.1
-Update 31 Oktober 2021:
-1. penyesuaian data CSV berdasarkan format webmap
-2. penambahan unit pada data serapan karbon dan harga adopsi
-3. tambahan feature event listener
-
-Beberapa hal yang belum lengkap:
-1. Leaflet search button,
-2. Icon pada legend,
-
-![Preview](preview.png)
-
+# SLJIV
+Draft Web Map SLJIV
 
 Link Map: https://armyputera.github.io/webmapsljivtanjungredeb/
 
