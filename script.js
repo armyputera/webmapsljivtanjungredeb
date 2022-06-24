@@ -62,7 +62,7 @@ var updateSidebar = function(marker) {
 
     // Populate place information into the sidebar
     $('#placeInfo').animate({opacity: 0.5}, 300).promise().done(function() {
-      $('#placeInfo h2').html(d.kode_pohon);
+      $('#placeInfo h2').html(d.barcode_pohon);
       $('#placeInfo h3').html(d.nomor_pohon+' ( '+d.nama_lokal+ ' )');
       $('#description').html(
         '<table>\
