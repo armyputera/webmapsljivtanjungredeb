@@ -63,7 +63,7 @@ var updateSidebar = function(marker) {
     // Populate place information into the sidebar
     $('#placeInfo').animate({opacity: 0.5}, 300).promise().done(function() {
       $('#placeInfo h2').html(d.barcode_pohon);
-      $('#placeInfo h3').html(d.nomor_pohon+' ( '+d.nama_lokal+ ' )');
+      $('#placeInfo h3').html(d.nomor_pohon+' ( '+d.jenis_pohon+ ' )');
       $('#description').html(
         '<table>\
           <tr>\
@@ -72,7 +72,7 @@ var updateSidebar = function(marker) {
           </tr>\
           <tr>\
             <th scope="row">Luas Petak</th>\
-            <td>'+d.luas_petak+'</td>\
+            <td>'+d.luas_petak+' Ha </td>\
           </tr>\
           <tr>\
             <th scope="row">Latitude</th>\
@@ -96,19 +96,19 @@ var updateSidebar = function(marker) {
           </tr>\
           <tr>\
             <th scope="row">Pangkal_pohon</th>\
-            <td>'+d.pangkal_pohon+' m </td>\
+            <td>'+d.pangkal_pohon+' cm </td>\
           </tr>\
           <tr>\
             <th scope="row">Ujung Pohon</th>\
-            <td>'+d.ujung_pohon+' km </td>\
+            <td>'+d.ujung_pohon+' cm </td>\
           </tr>\
           <tr>\
             <th scope="row">Rata-Rata Pohon</th>\
-            <td>'+d.rata_rata_pohon+'</td>\
+            <td>'+d.rata_rata_pohon+'cm </td>\
           </tr>\
           <tr>\
             <th scope="row">Volume Pohon</th>\
-            <td>'+d.volume_pohon+'</td>\
+            <td>'+d.volume_pohon+' m3</td>\
           </tr>\
           <tr>\
             <th scope="row">Nomor Produk</th>\
