@@ -142,7 +142,7 @@ var updateSidebar = function(marker) {
             href: d[idx],
             'data-lightbox': 'gallery',
             //'data-title': ( d[idx + 'Caption'] + ' ' + source )  || '',
-            'data-alt': d.kode_pohon,
+            'data-alt': d.barcode_pohon,
             'class': i === 1 ? '' : 'dn'
           });
 
@@ -244,7 +244,7 @@ var addMarkers = function(data) {
  */
 var loadData = function(loc) {
 
-  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungredep/main/data/Format_Web_Map_BSA.csv', {
+  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungredep/main/data/Format_Web_Map_LPHA.csv', {
     header: true,
     download: true,
     complete: function(results) {
