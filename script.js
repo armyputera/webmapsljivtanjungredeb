@@ -63,7 +63,7 @@ var updateSidebar = function(marker) {
     // Populate place information into the sidebar
     $('#placeInfo').animate({opacity: 0.5}, 300).promise().done(function() {
       $('#placeInfo h2').html(d.barcode_pohon);
-      $('#placeInfo h3').html(d.nomor_pohon+' ( <i>'+d.jenis_pohon+ '</i> )');
+      $('#placeInfo h3').html(d.nomor_pohon+' ( <i>'+d.nama_lokal+ '</i> )');
       $('#description').html(
         '<table>\
           <tr>\
@@ -123,7 +123,7 @@ var updateSidebar = function(marker) {
         $('#googleMaps').addClass('dn').removeClass('dt');
       }
 
-      $('#gallery').html('');
+      $('#gallery').html('index');
       $('#galleryIcon').hide();
 
       // Load up to 5 images
@@ -138,11 +138,11 @@ var updateSidebar = function(marker) {
            source = "<a href='" + d[idx + 'SourceLink'] + "' target='_blank'>" + source + "</a>";
            }
 
-          var a = $('<a/>', {
+           var a = $('<a/>', {
             href: d[idx],
             'data-lightbox': 'gallery',
             //'data-title': ( d[idx + 'Caption'] + ' ' + source )  || '',
-            'data-alt': d.barcode_pohon,
+            'data-alt': d.kode_pohon,
             'class': i === 1 ? '' : 'dn'
           });
 
@@ -165,7 +165,7 @@ var updateSidebar = function(marker) {
         }
       }
 
-      $('#placeInfo').animate({ opacity: 1 }, 300);
+      $('#placeInfo h2').animate({ opacity: 1 }, 300);
 
       // Scroll sidebar to focus on the place's title
       $('#sidebar').animate({
@@ -244,7 +244,7 @@ var addMarkers = function(data) {
  */
 var loadData = function(loc) {
 
-  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungredep/main/data/Format_Web_SLJIV.csv', {
+  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungredep/main/data/Format_Web_Map_LPHA.csv', {
     header: true,
     download: true,
     complete: function(results) {
