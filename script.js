@@ -191,7 +191,7 @@ var addMarkers = function(data) {
    // Check if Latitude and Longitude are not undefined
    if (d.Latitude && d.Longitude) {
     // Create a slug for URL hash, and add to marker data
-    d['slug'] = slugify(d.id);
+    d['slug'] = slugify(d.nomor_pohon);
 
     // Add an empty group if doesn't yet exist
     if (!groups[d.Group]) { groups[d.Group] = []; }
@@ -244,7 +244,7 @@ var addMarkers = function(data) {
  */
 var loadData = function(loc) {
 
-  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungredep/main/data/Format_Web_Map_BSA.csv', {
+  Papa.parse('https://raw.githubusercontent.com/armyputera/webmapsljivtanjungredep/main/data/Format_Web_Map_LPHA.csv', {
     header: true,
     download: true,
     complete: function(results) {
