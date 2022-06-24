@@ -104,11 +104,11 @@ var updateSidebar = function(marker) {
           </tr>\
           <tr>\
             <th scope="row">Rata-Rata Pohon</th>\
-            <td>'+d.rata_rata_pohon+'cm </td>\
+            <td>'+d.rata_rata_pohon+' cm </td>\
           </tr>\
           <tr>\
             <th scope="row">Volume Pohon</th>\
-            <td>'+d.volume_pohon+' m3</td>\
+            <td>'+d.volume_pohon+' m3 </td>\
           </tr>\
           <tr>\
             <th scope="row">Nomor Produk</th>\
