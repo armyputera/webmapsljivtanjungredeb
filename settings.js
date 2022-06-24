@@ -7,8 +7,8 @@ const mapCenter = [2.1171, 116.8123];
 const mapZoom = 14;
 
 // Marker icon height and width
-const iconHeight = 10;
-const iconWidth = 10;
+const iconHeight = 25;
+const iconWidth = 25;
 
 //Icon for pohon muda and pohon dewasa
 const sudahTebang =  'logo/pohon_dewasa.svg'
