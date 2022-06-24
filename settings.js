@@ -1,6 +1,6 @@
 // Where to load data from. Choose either a local file in GitHub repo, such as `data/places.csv`,
 // or a Google Sheets URL (File > Publish to the Web > CSV )
-const dataLocation = 'data/Format_Web_Map_LPHA.csv';
+const dataLocation = 'data/Format_Web_SLJIV.csv';
 
 // Map's initial center, and zoom level
 const mapCenter = [2.1171, 116.8123];
