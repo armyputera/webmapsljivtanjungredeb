@@ -210,7 +210,7 @@ var addMarkers = function(data) {
         placeInfo: d
       },
     ).on('click', function(e) {
-      map.flyTo(this._latlng, 20);
+      map.flyTo(this._latlng, 16);
       updateSidebar(this);
     });
 
