@@ -359,11 +359,11 @@ var initMap = function() {
   map.getPane('pane_SumalindoLestariJayaIV').style.zIndex = 1;
   map.getPane('pane_SumalindoLestariJayaIV').style['mix-blend-mode'] = 'normal';
 
-  layer_BatasKawasan = L.geoJson(json_AA0002RKU3,{
+  layer_BatasKawasan = L.geoJson(json_AA0004BLK3_geojson,{
     attribution: '',
     interactive: true,
-    dataVar: 'json_AA0002RKU3',
-    layerName: 'layer_AA0002RKU3',
+    dataVar: 'json_AA0004BLK3_geojson',
+    layerName: 'layer_AA0004BLK3_geojson',
     style: style_bataskawasan
   
     //pane: 'pane_SumalindoLestariJayaIV'
