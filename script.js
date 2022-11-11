@@ -355,18 +355,18 @@ var initMap = function() {
     }
   }
 
-  map.createPane('pane_PohonAdopsiMinastahura_4');
-  map.getPane('pane_PohonAdopsiMinastahura_4').style.zIndex = 1;
-  map.getPane('pane_PohonAdopsiMinastahura_4').style['mix-blend-mode'] = 'normal';
+  map.createPane('pane_SumalindoLestariJayaIV');
+  map.getPane('pane_SumalindoLestariJayaIV').style.zIndex = 1;
+  map.getPane('pane_SumalindoLestariJayaIV').style['mix-blend-mode'] = 'normal';
 
-  layer_BatasKawasan = L.geoJson(json_AA0004BLK3_geojson,{
+  layer_BatasKawasan = L.geoJson(json_AA0002RKU3,{
     attribution: '',
     interactive: true,
-    dataVar: 'json_AA0004BLK3_geojson',
-    layerName: 'layer_AA0004BLK3_geojson',
+    dataVar: 'json_AA0002RKU3',
+    layerName: 'layer_AA0002RKU3',
     style: style_bataskawasan
   
-    //pane: 'pane_PohonAdopsiMinastahura_4'
+    //pane: 'pane_SumalindoLestariJayaIV'
   });
   map.addLayer(layer_BatasKawasan);
 
