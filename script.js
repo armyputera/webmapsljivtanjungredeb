@@ -95,7 +95,7 @@ var updateSidebar = function(marker) {
             <td>'+d.panjang_pohon+' cm </td>\
           </tr>\
           <tr>\
-            <th scope="row">Pangkal_pohon</th>\
+            <th scope="row">Pangkal Pohon</th>\
             <td>'+d.pangkal_pohon+' cm </td>\
           </tr>\
           <tr>\
@@ -116,7 +116,7 @@ var updateSidebar = function(marker) {
           </tr>\
         </table>'
       );
-    
+      
       if (d.chart_link) {
         $('#googleMaps').removeClass('dn').addClass('dt').attr('href', d.chart_link);
       } else {
@@ -227,14 +227,14 @@ var addMarkers = function(data) {
     groups[g] = L.layerGroup(groups[g]);
 
     // By default, show all markers
-    groups[g].addTo(map);
+    groups['Sudah Tebang'].addTo(map);
   }
   
   L.control.layers({}, groups, {collapsed: true, position: 'topright'}).addTo(map);
   //$('.leaflet-control-layers-overlays').prepend('<h3 class="mt0 mb1 f5 black-30">Legend</h3>');
 
   // If name in hash, activate it
-  if (activeMarker) { activeMarker.fire('click') }
+  if (inactiveMarker) { inactiveMarker.fire('click') }
 
 }
 
@@ -372,9 +372,9 @@ var initMap = function() {
 
   //group basemaps
   basemaps= {
-    "Peta Dasar (OSM Standard)":layer_OSMStandard_0,
-    "Peta Dasar (Google Terrain)": layer_GoogleTerrain_1,
-    "Peta Dasar (Google Satellite)": layer_GoogleSatellite_2
+    "OpenStreetMap":layer_OSMStandard_0,
+    "Google Terrain": layer_GoogleTerrain_1,
+    "Google Satellite": layer_GoogleSatellite_2
   };
 
   // Add to map all basemaps
@@ -396,10 +396,10 @@ var initMap = function() {
 
   // Add data & GitHub links
   map.attributionControl.setPrefix('Download <a href="'
-    + dataLocation + '" target="_blank">data</a> or \
-    view <a href="https://github.com/armyputera/webmapsljivtanjungredeb" target="_blank">code on\
-    GitHub</a> | created with <a href="http://leafletjs.com" title="A JS library\
-    for interactive maps">Leaflet</a>');
+    + dataLocation + '" target="_blank">data</a> | go \
+    to <a href="https://sljiv.sanimardani.com" target="_blank"> \
+    Sumalindo Lestari Jaya IV</a> | <a href="http://leafletjs.com" title="A JS library\
+    for interactive maps">Leaflet</a> | &#169; Sanimardani Resources 2022');
 
   // Add custom `home` control
   addHomeButton({
