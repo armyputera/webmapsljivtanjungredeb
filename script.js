@@ -227,7 +227,7 @@ var addMarkers = function(data) {
     groups[g] = L.layerGroup(groups[g]);
 
     // By default, show all markers
-    groups['Sudah Tebang'].addTo(map);
+    groups['Belum Tebang'].addTo(map);
   }
   
   L.control.layers({}, groups, {collapsed: true, position: 'topright'}).addTo(map);
